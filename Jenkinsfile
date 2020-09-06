@@ -11,9 +11,21 @@ pipeline {
                 sh 'make check' 
             }
         }
-        stage('Deploy') {
+        stage('Deliver for development') {
+            when {
+                branch 'development' 
+            }
             steps {
-                sh 'make run'
+                sh 'make run-development'
+            }
+        }
+        stage('Deploy for production') {
+            when {
+                branch 'production'  
+            }
+            steps {
+            	sh 'make run-production'
+                
             }
         }
     }
