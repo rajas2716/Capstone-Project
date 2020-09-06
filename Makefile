@@ -10,4 +10,6 @@ check:
 	tidy -q -e static/*.html
 
 install: 
-	sudo apt install make			
+	sudo apt install make
+	sudo snap install docker
+				
