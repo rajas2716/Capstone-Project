@@ -12,7 +12,7 @@ check:
 	tidy -q -e static/*.html
 
 install:
-	 
+	sudo su 
 	apt install make
 	snap install docker
 	wget https://github.com/hadolint/hadolint/releases/download/v1.18.0/hadolint-Linux-x86_64
