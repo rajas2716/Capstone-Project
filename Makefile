@@ -10,5 +10,4 @@ check:
 	tidy -q -e static/*.html
 
 install: 
-	pip3 install --upgrade pip &&\
-		pip3 install --user -r requirements.txt			
+	sudo apt install make			
