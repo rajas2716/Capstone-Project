@@ -1,5 +1,6 @@
---- 
-all: 
-  hosts: 
-    ansadmin@10.0.0.79: ~
-
+all:
+  hosts:
+  children:
+    master-node:
+      hosts:
+        ansadmin@10.0.0.79:
