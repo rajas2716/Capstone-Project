@@ -1,11 +1,11 @@
 build:
-	ansible-playbook -i all hosts ansible-create-docker-image.yml
+	ansible-playbook -i all hosts.yml ansible-create-docker-image.yml
 	
 run-production: 
-	ansible-playbook -i all hosts ansible-create-service.yml
+	ansible-playbook -i all hosts.yml ansible-create-service.yml
 
 run-development:
-	ansible-playbook -i all hosts ansible-create-deployment.yml
+	ansible-playbook -i all hosts.yml ansible-create-deployment.yml
 	
 check:
 	hadolint Dockerfile
