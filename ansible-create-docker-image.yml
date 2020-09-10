@@ -1,0 +1,17 @@
+---
+- hosts: ansible-server
+  become: true
+
+  tasks:
+  - name: create docker image using dockerfile file
+    command: docker build -t capstone:latest .
+
+  - name: create tag to image
+    command: docker tag capstone rajas2716/capstone
+
+  - name: push image on to dockerhub
+    command: docker push rajas2716/capstone
+
+  - name: remove docker images form ansible server
+    command: docker rmi capstone:latest rajas2716/capstone
+    ignore_errors: yes

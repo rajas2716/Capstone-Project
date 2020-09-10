@@ -1,11 +1,11 @@
 build:
-	docker build --tag nginx .
+	ansible-playbook -i all /home/ansadmin/hosts /home/ansadmin/ansible-create-docker-image.yml
 	
 run-production: 
-	docker run -d -p 8000:80 nginx
+	ansible-playbook -i all /home/ansadmin/hosts /home/ansadmin/ansible-create-service.yml
 
 run-development:
-	docker run -d -p 7000:80 nginx	
+	ansible-playbook -i all /home/ansadmin/hosts /home/ansadmin/ansible-create-deployment.yml
 	
 check:
 	hadolint Dockerfile
