@@ -1,5 +1,5 @@
 ---
-- hosts: ansible-server
+- hosts: master-node
   become: true
 
   tasks:

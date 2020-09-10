@@ -1,9 +1,8 @@
 ---
 - name: create service for deployment
-  hosts: kubernetes
+  hosts: master-node
   become: true
-  user: ubuntu
-
+  
   tasks:
   - name: create a service
     command: kubectl apply -f service.yml
