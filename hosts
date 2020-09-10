@@ -1,3 +1,5 @@
-all:
-  hosts:
-  	ansadmin@10.0.0.79:
+--- 
+all: 
+  hosts: 
+    ansadmin@10.0.0.79: ~
+
