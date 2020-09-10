@@ -9,6 +9,7 @@ run-development:
 	
 check:
 	hadolint Dockerfile
-
+	tidy -q -e static/*.html
+	
 all: check build run				
-				
+		
