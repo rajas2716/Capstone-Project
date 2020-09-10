@@ -1,5 +1,4 @@
 build:
-	whoami
 	ansible-playbook ansible-create-docker-image.yml
 	
 run-production: 
