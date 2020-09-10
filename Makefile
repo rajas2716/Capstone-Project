@@ -1,5 +1,6 @@
 build:
-	ansible-playbook /home/ansadmin/ansible-create-docker-image.yml
+	whoami
+	ansible-playbook ansible-create-docker-image.yml
 	
 run-production: 
 	ansible-playbook ansible-create-service.yml
