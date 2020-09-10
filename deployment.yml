@@ -23,4 +23,4 @@ spec:
         image: rajas2716/capstone
         imagePullPolicy: Always
         ports:
-        - containerPort: 8080
+        - containerPort: 80
