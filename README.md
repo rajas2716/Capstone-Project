@@ -1,5 +1,7 @@
 # Capstone-Project
+
   Deployment Type - Rolling Deployment
+  
   Applicaiton - Nginx with customized index.html file
 
 # This is the final project of my Udacity Cloud Engineering Nanodegree Program
