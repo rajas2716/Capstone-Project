@@ -2,6 +2,10 @@ Kubernetes cluster is created using the following steps:
 
  Prerequisites
 
+	configure-ansible.txt
+
+	NOTE: These steps must be completed in the same instance in which client was configured.
+
 	aws s3 ls (This should list all the s3 of the aws account) // Check aws connection
 
 	The instance should have the following priviliges
@@ -23,6 +27,10 @@ Kubernetes cluster is created using the following steps:
 	2. chmod +x ./kubectl
 
 	3. sudo mv ./kubectl /usr/local/bin/kubectl
+
+	INTALL DOCKER
+
+	sudo apt install docker.io
 
 
 -----------------STEPS ---------------------------

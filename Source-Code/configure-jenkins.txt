@@ -1,0 +1,57 @@
+Jenkins is a free and open source automation server. It helps automate the parts of software development related to building, testing, and deploying, facilitating continuous integration and continuous delivery.
+
+PREREQUISITES
+	
+	configure-ansible.txt
+
+	Install:
+		apt update 
+		apt upgrade
+		apt install default-jdk
+
+	NOTE: These steps must be completed in the same instance in which control-server was configured.
+
+	
+
+
+---------------STEPS -------------------
+
+1. Install jenkins
+
+	Run the following commands:
+
+	wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+
+	sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+
+	sudo apt update
+
+	sudo apt install jenkins
+
+2. Verify Jenkins
+
+	sudo systemctl status jenkins
+
+3. Go to the url : {{public_dns of instance}}:8080
+
+	sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+	Copy the password and paste in the Password section on web-page
+
+4. Configure jenkins on web page
+
+	Install suggested plugins 
+
+	Login
+
+5. Install plugins from Manage-jenkins -> Install Plugins -> Available
+
+	Blue-Ocean
+
+	aws-pipeline
+	
+	sudo systemctl restart jenkins
+
+6. Set up pipeline and connect to project github repo
+
+	Repo must contain Jenkinsfile // Refer to Jenkinsfile within this repository	

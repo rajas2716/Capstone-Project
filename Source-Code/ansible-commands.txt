@@ -2,13 +2,15 @@ Ansible can be used to deploy application on multiple machines easily
 
 PREREQUISITES
 	
+	configure-ansible.txt
+	
 	FOLLOW STEPS inside ansible-configuration.txt
 	
 	git clone https://github.com/rajas2716/Capstone-Project.git
 
 -------STEPS ---------------
 
-1. Copy all the latest github files to the client machine
+1. Copies all the latest github files to the client machine
 
 	ansible all -m copy -a "src=/var/lib/jenkins/workspace/Capstone-Project_master/ dest=/home/ansadmin"
 
