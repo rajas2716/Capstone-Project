@@ -65,7 +65,7 @@
  
       1. Complete [configure-ansible.txt](https://github.com/rajas2716/Capstone-Project/blob/master/Source-Code/configure-ansible.txt)
       
-      2. Complete [configure-jenkins.txt]()
+      2. Complete [configure-jenkins.txt](https://github.com/rajas2716/Capstone-Project/blob/master/Source-Code/configure-jenkins.txt)
       
       3. Complete [create-cluster.txt](https://github.com/rajas2716/Capstone-Project/blob/master/Source-Code/create-cluster.txt)
       
