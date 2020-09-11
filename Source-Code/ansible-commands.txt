@@ -1,0 +1,27 @@
+Ansible can be used to deploy application on multiple machines easily
+
+PREREQUISITES
+	
+	FOLLOW STEPS inside ansible-configuration.txt
+	
+	git clone https://github.com/rajas2716/Capstone-Project.git
+
+-------STEPS ---------------
+
+1. Copy all the latest github files to the client machine
+
+	ansible all -m copy -a "src=/var/lib/jenkins/workspace/Capstone-Project_master/ dest=/home/ansadmin"
+
+2. Build and push the latest docker image on the docker hub 
+
+	ansible-playbook ansible-create-docker-image.yml  
+
+3. Create deployment and pods on all nodes
+
+	ansible-playbook ansible-create-deployment.yml
+	
+4. Create service for exposing the application in Dockerfile
+
+	ansible-playbook ansible-create-service.yml
+	
+ 

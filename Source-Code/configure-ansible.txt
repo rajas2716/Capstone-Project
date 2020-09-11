@@ -1,0 +1,60 @@
+ Ansible can help you with configuration management, application deployment, task automation.
+
+Steps to configure ansible on Control-Server and the client machine
+
+PREREQUISITES
+
+	INSTALL PYTHON AND PYTHON-PIP
+
+	apt install python                    // For linux-like systems
+	apt install python-pip
+
+	INSTALL ANSIBLE
+
+	pip install ansible
+
+
+------------STEPS--------------------
+
+1. Add user in both the control-server and the client machine
+
+	  useradd -m -d /home/ansadmin/ -s /bin/bash -G sudo ansadmin
+
+	  passwd ansadmin  //Creates password for ansadmin user
+
+2. Allow ssh on both machines by changing sshd_config file (For both client and control-server)
+
+	cd /etc/ssh
+	vi sshd_config
+	Change 'PasswordAuthentication' to yes
+
+3. Restart sshd service 
+
+	restart sshd service
+
+4. Make a rule for changing root user privileges for both client and control-server in user ansadmin
+
+	visudo
+	
+	ansadmin ALL=(ALL) NOPASSWD: ALL
+
+5. Login as ansadmin on your control-server and create ssh-key for ssh connection configuration
+
+	ssh-keygen
+
+6. Copy ssh key to the client user for password less ssh by the ansible api
+
+	ssh-copy-id ansadmin@{{ip_address_of_client}}
+
+7. Try to ssh into the client from the control-server
+
+	ssh ansadmin@{{ip_address_of_client}}
+
+8. Add host file in /etc/ansible/hosts
+
+	[master-node]
+	ansadmin@{{ipaddress-of-master-node}}
+ 
+9. Ping all ansible clients stored in the hosts file
+
+	ansible all -m ping
