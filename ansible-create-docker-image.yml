@@ -12,8 +12,4 @@
   - name: push image on to dockerhub
     command: docker push rajas2716/capstone
 
-  - name: remove docker images form ansible server
-    command: docker rmi capstone:latest rajas2716/capstone
-    ignore_errors: yes
-    
 

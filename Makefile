@@ -9,6 +9,7 @@ run-development:
 	ansible-playbook ansible-create-deployment.yml
 	
 check:
+	ansible-playbook docker-bench-security.yml
 	hadolint Dockerfile
 	tidy -q -e static/*.html
 	
